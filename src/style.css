@@ -1,0 +1,147 @@
+.load-more {
+    display: block;
+    background-color: #7351bc;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 15px 32px;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.load-more-hidden {
+    display: none;
+}
+
+.load-more:focus,
+.load-more:hover {
+    background: rgba(0, 0, 0, 0);
+        color: #7351bc;
+        box-shadow: inset 0 0 0 3px #7351bc;
+}
+
+/* стилі картки  */
+.info-item {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.gallery-link {
+    text-decoration: none;
+}
+
+
+
+.photo-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    /* background-color: #fff;
+    border: 1px solid #ccc; */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.photo-card:hover {
+    border: 3px solid #7351bc;
+}
+
+.photo-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.photo-card .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+    
+}
+
+.photo-card .info-item {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+
+    flex-basis: 45%;
+    margin: 5px;
+    color: black;
+    
+}
+
+.photo-card .info-item b {
+    font-weight: bold;
+   
+}
+
+.photo-card .info-item .item-text {
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+    
+
+}
+
+/* стилі форми пошуку */
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-form input[type='text'] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    width: 70%;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: #7351bc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    
+}
+
+.search-form button:hover {
+    background: rgba(0, 0, 0, 0);
+        color: #7351bc;
+        box-shadow: inset 0 0 0 3px #7351bc;
+}
+
