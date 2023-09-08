@@ -21,6 +21,7 @@ async function handlerSubmit(evt) {
   evt.preventDefault();
   elements.cardWrapper.innerHTML = '';
   elements.btnLoadMore.classList.replace('load-more', 'load-more-hidden');
+  currentPage = 1;
 
   const searchQuery = evt.target.elements.searchQuery.value;
   localStorage.setItem('input-value', searchQuery);
@@ -57,12 +58,13 @@ async function handlerSubmit(evt) {
     }
   } catch (error) {
     Notify.failure(
-      'На жаль, немає зображень, що відповідають вашому запиту. Будь ласка, спробуйте ще раз.'
+      "We're sorry, but there are no images matching your search query. Please try again."
     );
   } finally {
     gallery.refresh();
   }
 }
+
 
 function handlercardWrapper(evt) {
   evt.preventDefault();
@@ -79,6 +81,7 @@ async function handlerLoadMore() {
     elements.cardWrapper.insertAdjacentHTML('beforeend', cardsHTML);
     if (data.totalHits <= quantityImg) {
       elements.btnLoadMore.classList.replace('load-more', 'load-more-hidden');
+      Notify.info("We're sorry, but you've reached the end of search results.");
     }
   } catch (error) {
     Notify.failure(error.message);
@@ -86,6 +89,7 @@ async function handlerLoadMore() {
     gallery.refresh();
   }
 }
+
 
 function createCards(arr) {
   return arr
